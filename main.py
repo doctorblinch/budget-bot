@@ -23,8 +23,6 @@ async def start_handler(message):
 
 @dp.message_handler()
 async def handler(message: types.Message):
-    #msg = bot.send_message(message.chat.id, 'Откуда парсить?')
-    #m = bot.register_next_step_handler(msg, askForWhat)
 
     if message.text.isdigit():
         user = session.query(User).get(1)
